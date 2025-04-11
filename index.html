@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="منصة الفعاليات لتنظيم وحجز الفعاليات في السعودية" />
+    <meta name="keywords" content="فعاليات, حجز فعاليات, السعودية, مهرجانات, معارض" />
+    <title data-lang-ar="الرئيسية - منصة الفعاليات" data-lang-en="Home - Events Platform">الرئيسية - منصة الفعاليات</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1 data-lang-ar="منصة الفعاليات" data-lang-en="Events Platform">منصة الفعاليات</h1>
+        </div>
+        <nav aria-label="التنقل الرئيسي">
+            <ul>
+                <li><a href="index.html" class="active" data-lang-ar="الرئيسية" data-lang-en="Home">الرئيسية</a></li>
+                <li><a href="events.html" data-lang-ar="الفعاليات" data-lang-en="Events">الفعاليات</a></li>
+                <li><a href="about.html" data-lang-ar="حول" data-lang-en="About">حول</a></li>
+                <li><a href="contact.html" data-lang-ar="تواصل" data-lang-en="Contact">تواصل</a></li>
+                <li><a href="signup.html" data-lang-ar="إنشاء حساب" data-lang-en="Sign Up">إنشاء حساب</a></li>
+                <li><a href="login.html" data-lang-ar="تسجيل الدخول" data-lang-en="Login">تسجيل الدخول</a></li>
+            </ul>
+            <div class="header-search">
+                <input type="text" id="header-search" placeholder="ابحث..." aria-label="البحث في الموقع" data-lang-ar-placeholder="ابحث..." data-lang-en-placeholder="Search..." />
+                <button class="btn-search" aria-label="بحث"><i class="fas fa-search"></i></button>
+            </div>
+            <!-- <div class="language-switcher">
+                <select id="language-switcher" aria-label="اختيار اللغة">
+                    <option value="ar">عربي</option>
+                    <option value="en">English</option>
+                </select>
+            </div> -->
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero-slider" class="slider-container" aria-label="سلايدر الفعاليات الرئيسي">
+            <button class="pause-slider" aria-label="إيقاف السلايدر">⏸</button>
+            <div class="slider">
+                <div class="slide active">
+                    <img src="https://makkahnewspaper.com/uploads/images/2023/10/31/1653336.jpg" alt="مهرجان التراث الثقافي في الرياض" loading="lazy" />
+                    <div class="slide-caption">
+                        <h2 data-lang-ar="مهرجان التراث الثقافي" data-lang-en="Cultural Heritage Festival">مهرجان التراث الثقافي</h2>
+                        <p data-lang-ar="اكتشف جمال التقاليد في قلب الرياض!" data-lang-en="Discover the beauty of traditions in the heart of Riyadh!">اكتشف جمال التقاليد في قلب الرياض!</p>
+                        <button class="btn" data-lang-ar="احجز الآن" data-lang-en="Book Now">احجز الآن</button>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819" alt="حفلة موسيقية حية في جدة" loading="lazy" />
+                    <div class="slide-caption">
+                        <h2 data-lang-ar="ليلة الموسيقى الحية" data-lang-en="Live Music Night">ليلة الموسيقى الحية</h2>
+                        <p data-lang-ar="استمتع بأمسية موسيقية لا تُنسى!" data-lang-en="Enjoy an unforgettable musical evening!">استمتع بأمسية موسيقية لا تُنسى!</p>
+                        <button class="btn" data-lang-ar="احجز الآن" data-lang-en="Book Now">احجز الآن</button>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-dots" role="tablist"></div>
+        </section>
+
+        <section id="search" class="container">
+            <h2 data-lang-ar="ابحث عن فعالياتك المفضلة" data-lang-en="Find Your Favorite Events">ابحث عن فعالياتك المفضلة</h2>
+            <div class="search-bar">
+                <input type="text" id="search-box" placeholder="ابحث عن فعالية..." aria-label="ابحث عن فعالية" data-lang-ar-placeholder="ابحث عن فعالية..." data-lang-en-placeholder="Search for an event..." />
+                <button class="btn-search" aria-label="بحث"><i class="fas fa-search"></i></button>
+            </div>
+        </section>
+
+        <section id="coming-events" class="container">
+            <h2 data-lang-ar="فعاليات قادمة" data-lang-en="Upcoming Events">فعاليات قادمة</h2>
+            <div class="secondary-slider" aria-label="سلايدر الفعاليات القادمة">
+                <div class="slide active">
+                    <img src="https://livelovesaudi.net/wp-content/uploads/2024/10/Screenshot-2024-10-20-111208.png" alt="مهرجان أطعمة العالم في جدة" loading="lazy" />
+                    <div class="slide-caption">
+                        <h3 data-lang-ar="مهرجان أطعمة العالم" data-lang-en="World Food Festival">مهرجان أطعمة العالم</h3>
+                        <p data-lang-ar="تاريخ: 10 يوليو 2025 - جدة" data-lang-en="Date: July 10, 2025 - Jeddah">تاريخ: 10 يوليو 2025 - جدة</p>
+                        <button class="btn" data-lang-ar="اعرف المزيد" data-lang-en="Learn More">اعرف المزيد</button>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1540575466983-645a6e7ddbb2" alt="مؤتمر التقنية والابتكار في الرياض" loading="lazy" />
+                    <div class="slide-caption">
+                        <h3 data-lang-ar="مؤتمر التقنية والابتكار" data-lang-en="Technology and Innovation Conference">مؤتمر التقنية والابتكار</h3>
+                        <p data-lang-ar="تاريخ: 5 يوليو 2025 - الرياض" data-lang-en="Date: July 5, 2025 - Riyadh">تاريخ: 5 يوليو 2025 - الرياض</p>
+                        <button class="btn" data-lang-ar="اعرف المزيد" data-lang-en="Learn More">اعرف المزيد</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="newsletter" class="container">
+            <h2 data-lang-ar="اشترك في نشرتنا البريدية" data-lang-en="Subscribe to Our Newsletter">اشترك في نشرتنا البريدية</h2>
+            <form class="newsletter-form" aria-label="نموذج الاشتراك في النشرة البريدية">
+                <input type="email" placeholder="أدخل بريدك الإلكتروني" required aria-required="true" data-lang-ar-placeholder="أدخل بريدك الإلكتروني" data-lang-en-placeholder="Enter your email" />
+                <button type="submit" class="btn" data-lang-ar="اشترك" data-lang-en="Subscribe">اشترك</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content container">
+            <div class="footer-logo">
+                <h2 data-lang-ar="منصة الفعاليات" data-lang-en="Events Platform">منصة الفعاليات</h2>
+            </div>
+            <div class="footer-links">
+                <a href="about.html" data-lang-ar="حول" data-lang-en="About">حول</a>
+                <a href="contact.html" data-lang-ar="تواصل" data-lang-en="Contact">تواصل</a>
+                <a href="terms.html" data-lang-ar="الشروط والأحكام" data-lang-en="Terms and Conditions">الشروط والأحكام</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://facebook.com" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com" aria-label="تويتر"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com" aria-label="إنستغرام"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <p data-lang-ar="© 2025 منصة الفعاليات - جميع الحقوق محفوظة" data-lang-en="© 2025 Events Platform - All Rights Reserved">
+            © <script>document.write(new Date().getFullYear())</script> منصة الفعاليات - جميع الحقوق محفوظة
+        </p>
+    </footer>
+
+    <script src="slider.js"></script>
+</body>
+</html>
