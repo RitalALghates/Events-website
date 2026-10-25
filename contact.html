@@ -1,111 +1,50 @@
-
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="تواصل مع منصة الفعاليات للاستفسارات وحجز الفعاليات" />
-    <meta name="keywords" content="تواصل, منصة الفعاليات, استفسارات, حجز فعاليات" />
-    <title>تواصل - منصة الفعاليات</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-    <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>منصة الفعاليات</title>
+  <meta name="description" content="تواصل مع فريق منصة الفعاليات" />
+  <meta name="theme-color" content="#0f3d3e" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="assets/data.js" defer></script>
+  <script src="assets/app.js" defer></script>
 </head>
-<body>
-    <button class="back-to-top" aria-label="العودة إلى الأعلى"><i class="fas fa-chevron-up"></i></button>
-    <header>
-        <div class="logo">
-            <h1 data-lang-ar="منصة الفعاليات" data-lang-en="Events Platform">منصة الفعاليات</h1>
+<body data-page="contact" class="inner">
+  <header id="site-header"></header>
+  <main>
+    <div class="page-head"><div class="container"><h1 data-i18n="contact.t"></h1><p data-i18n="contact.p"></p></div></div>
+    <section>
+      <div class="container contact-wrap">
+        <div>
+          <div class="info-card reveal"><span class="ic">✉️</span><div><b data-i18n="c.mail"></b><span class="ltr">events@platform.com</span></div></div>
+          <div class="info-card reveal"><span class="ic">📍</span><div><b data-i18n="c.where"></b><span data-i18n="c.where.v"></span></div></div>
+          <div class="info-card reveal"><span class="ic">🕘</span><div><b data-i18n="c.hours"></b><span data-i18n="c.hours.v"></span></div></div>
         </div>
-        <nav aria-label="التنقل الرئيسي">
-            <ul>
-
-                <li><a href="index.html"data-lang-ar="الرئيسية" data-lang-en="Home"  >الرئيسية</a> </li>
-                <li><a href="events.html" data-lang-ar="الفعاليات" data-lang-en="Events">الفعاليات</a></li>
-                <li><a href="about.html" data-lang-ar="حول" data-lang-en="About">حول</a></li>
-                <li><a href="contact.html"  class="active" data-lang-ar="تواصل" data-lang-en="Contact" >تواصل</a></li>
-                <li><a href="signup.html" data-lang-ar="إنشاء حساب" data-lang-en="Sign Up">إنشاء حساب</a></li>
-                <li><a href="login.html" data-lang-ar="تسجيل الدخول" data-lang-en="Login">تسجيل الدخول</a></li>
-            </ul>
-            <div class="header-search">
-                <input type="text" id="header-search" placeholder="ابحث..." aria-label="البحث في الموقع" data-lang-ar-placeholder="ابحث..." data-lang-en-placeholder="Search..." />
-                <button class="btn-search" aria-label="بحث"><i class="fas fa-search"></i></button>
-            </div>
-            <!-- <div class="language-switcher">
-                <select id="language-switcher" aria-label="اختيار اللغة">
-                    <option value="ar">عربي</option>
-                    <option value="en">English</option>
-                </select>
-            </div> -->
-        </nav>
-    </header>
-
-    <main>
-        <section id="contact-slider" class="slider-container" aria-label="سلايدر التواصل">
-            <button class="pause-slider" aria-label="إيقاف السلايدر">⏸</button>
-            <div class="slider">
-                <div class="slide active">
-                    <img src="https://siteupmarketing.com/wp-content/uploads/2024/06/contact-us.png" alt="دعوة للتواصل مع فريق منصة الفعاليات" loading="lazy" />
-                    <div class="slide-caption">
-                        <h2>تواصل معنا</h2>
-                        <p>فريقنا جاهز للإجابة على استفساراتك!</p>
-                        <button class="btn">أرسل رسالتك</button>
-                    </div>
-                </div>
-                <div class="slide">
-                    <img src="images/contact-event.webp" alt="مشاركة تجربة فعالية سابقة" loading="lazy" />
-                    <div class="slide-caption">
-                        <h2>شاركنا تجربتك</h2>
-                        <p>ساعدنا لتحسين فعالياتنا بآرائك!</p>
-                        <button class="btn">أرسل رسالتك</button>
-                    </div>
-                </div>
-            </div>
-            <button class="slider-control prev" aria-label="الشريحة السابقة"><i class="fas fa-chevron-right"></i></button>
-            <button class="slider-control next" aria-label="الشريحة التالية"><i class="fas fa-chevron-left"></i></button>
-            <div class="slider-dots" role="tablist"></div>
-        </section>
-
-        <section id="contact-form" class="container">
-            <h2>أرسل رسالتك</h2>
-            <form id="contact-form" aria-label="نموذج التواصل">
-                <div class="form-group">
-                    <label for="name">الاسم</label>
-                    <input type="text" id="name" placeholder="أدخل اسمك" required aria-required="true" />
-                </div>
-                <div class="form-group">
-                    <label for="email">البريد الإلكتروني</label>
-                    <input type="email" id="email" placeholder="أدخل بريدك الإلكتروني" required aria-required="true" />
-                </div>
-                <div class="form-group">
-                    <label for="message">الرسالة</label>
-                    <textarea id="message" placeholder="اكتب رسالتك هنا" required aria-required="true"></textarea>
-                </div>
-                <button type="submit" class="btn">إرسال</button>
-                <p class="form-message" aria-live="polite"></p>
-            </form>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-content container">
-            <div class="footer-logo">
-                <h2>منصة الفعاليات</h2>
-            </div>
-            <div class="footer-links">
-                <a href="about.html">حول</a>
-                <a href="contact.html">تواصل</a>
-                <a href="terms.html">الشروط والأحكام</a>
-            </div>
-            <div class="footer-social">
-                <a href="https://facebook.com" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://twitter.com" aria-label="تويتر"><i class="fab fa-twitter"></i></a>
-                <a href="https://instagram.com" aria-label="إنستغرام"><i class="fab fa-instagram"></i></a>
-            </div>
+        <div class="panel reveal">
+          <form id="contact-form" novalidate>
+            <div class="fg"><label for="c-name" data-i18n="c.name"></label><input id="c-name" name="name" data-i18n-ph="c.ph.name" autocomplete="name" /><div class="err"></div></div>
+            <div class="fg"><label for="c-email" data-i18n="c.email"></label><input id="c-email" name="email" type="email" class="ltr" placeholder="name@example.com" autocomplete="email" /><div class="err"></div></div>
+            <div class="fg"><label for="c-msg" data-i18n="c.msg"></label><textarea id="c-msg" name="message" data-i18n-ph="c.ph.msg"></textarea><div class="err"></div></div>
+            <button class="btn full" type="submit" data-i18n="c.send"></button>
+          </form>
         </div>
-        <p>© <script>document.write(new Date().getFullYear())</script> منصة الفعاليات - جميع الحقوق محفوظة</p>
-    </footer>
-
-    <script src="slider.js"></script>
+      </div>
+    </section>
+    <section style="padding-top:0">
+      <div class="container">
+        <div class="sec-head center reveal"><div><h2 data-i18n="faq.t"></h2></div></div>
+        <div class="faq">
+          <details class="reveal"><summary data-i18n="faq1q"></summary><p data-i18n="faq1a"></p></details>
+          <details class="reveal"><summary data-i18n="faq2q"></summary><p data-i18n="faq2a"></p></details>
+          <details class="reveal"><summary data-i18n="faq3q"></summary><p data-i18n="faq3a"></p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer id="site-footer"></footer>
 </body>
 </html>

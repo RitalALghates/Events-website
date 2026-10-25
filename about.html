@@ -1,101 +1,36 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="تعرف على منصة الفعاليات ومهمتنا ورؤيتنا" />
-    <meta name="keywords" content="حول منصة الفعاليات, رؤية, مهمة" />
-    <title data-lang-ar="حول - منصة الفعاليات" data-lang-en="About - Events Platform">حول - منصة الفعاليات</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-    <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>منصة الفعاليات</title>
+  <meta name="description" content="منصة رقمية تسهّل حجز وتنظيم الفعاليات في المملكة العربية السعودية" />
+  <meta name="theme-color" content="#0f3d3e" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="assets/data.js" defer></script>
+  <script src="assets/app.js" defer></script>
 </head>
-<body>
-    <header>
-        <div class="logo">
-            <h1 data-lang-ar="منصة الفعاليات" data-lang-en="Events Platform">منصة الفعاليات</h1>
-        </div>
-        <nav aria-label="التنقل الرئيسي">
-            <ul>
-                <li><a href="index.html" data-lang-ar="الرئيسية" data-lang-en="Home">الرئيسية</a></li>
-                <li><a href="events.html" data-lang-ar="الفعاليات" data-lang-en="Events">الفعاليات</a></li>
-                <li><a href="about.html" class="active" data-lang-ar="حول" data-lang-en="About">حول</a></li>
-                <li><a href="contact.html" data-lang-ar="تواصل" data-lang-en="Contact">تواصل</a></li>
-                <li><a href="signup.html" data-lang-ar="إنشاء حساب" data-lang-en="Sign Up">إنشاء حساب</a></li>
-                <li><a href="login.html" data-lang-ar="تسجيل الدخول" data-lang-en="Login">تسجيل الدخول</a></li>
-            </ul>
-            <div class="header-search">
-                <input type="text" id="header-search" placeholder="ابحث..." aria-label="البحث في الموقع" data-lang-ar-placeholder="ابحث..." data-lang-en-placeholder="Search..." />
-                <button class="btn-search" aria-label="بحث"><i class="fas fa-search"></i></button>
-            </div>
-            <!-- <div class="language-switcher">
-                <select id="language-switcher" aria-label="اختيار اللغة">
-                    <option value="ar">عربي</option>
-                    <option value="en">English</option>
-                </select>
-            </div> -->
-        </nav>
-    </header>
-
-    <main>
-        <section id="about-slider" class="slider-container" aria-label="سلايدر حول المنصة">
-            <button class="pause-slider" aria-label="إيقاف السلايدر">⏸</button>
-            <div class="slider">
-                <div class="slide active">
-                    <img src="https://images.unsplash.com/photo-1506152983158-b4a74a01c721" alt="رؤية منصة الفعاليات" loading="lazy" />
-                    <div class="slide-caption">
-                        <h2 data-lang-ar="رؤيتنا" data-lang-en="Our Vision">رؤيتنا</h2>
-                        <p data-lang-ar="أن نكون المنصة الرائدة لحجز الفعاليات في السعودية!" data-lang-en="To be the leading platform for booking events in Saudi Arabia!">أن نكون المنصة الرائدة لحجز الفعاليات في السعودية!</p>
-                        <button class="btn" data-lang-ar="اعرف المزيد" data-lang-en="Learn More">اعرف المزيد</button>
-                    </div>
-                </div>
-                <div class="slide">
-                    <img src="https://images.unsplash.com/photo-1515169067868-5387ec356754" alt="مهمة منصة الفعاليات" loading="lazy" />
-                    <div class="slide-caption">
-                        <h2 data-lang-ar="مهمتنا" data-lang-en="Our Mission">مهمتنا</h2>
-                        <p data-lang-ar="دعم المجتمع من خلال تنظيم فعاليات ثقافية وترفيهية!" data-lang-en="Support the community by organizing cultural and entertainment events!">دعم المجتمع من خلال تنظيم فعاليات ثقافية وترفيهية!</p>
-                        <button class="btn" data-lang-ar="اعرف المزيد" data-lang-en="Learn More">اعرف المزيد</button>
-                    </div>
-                </div>
-            </div>
-            <div class="slider-dots" role="tablist"></div>
-        </section>
-
-        <section id="about-details" class="container">
-            <h2 data-lang-ar="حول منصة الفعاليات" data-lang-en="About Events Platform">حول منصة الفعاليات</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p data-lang-ar="منصة الفعاليات هي منصة رقمية تهدف إلى تسهيل عملية حجز وتنظيم الفعاليات في المملكة العربية السعودية. نحن نعمل على ربط المنظمين بالجمهور من خلال توفير تجربة مستخدم سلسة وسهلة." data-lang-en="Events Platform is a digital platform aimed at facilitating the booking and organization of events in Saudi Arabia. We work to connect organizers with the audience through a seamless and easy user experience.">منصة الفعاليات هي منصة رقمية تهدف إلى تسهيل عملية حجز وتنظيم الفعاليات في المملكة العربية السعودية. نحن نعمل على ربط المنظمين بالجمهور من خلال توفير تجربة مستخدم سلسة وسهلة.</p>
-                    <p data-lang-ar="نؤمن بأهمية الفعاليات في تعزيز التواصل الاجتماعي ودعم الثقافة المحلية، ونسعى لتقديم أفضل الخدمات لضمان تجربة لا تُنسى لكل المشاركين." data-lang-en="We believe in the importance of events in enhancing social interaction and supporting local culture, and we strive to provide the best services to ensure an unforgettable experience for all participants.">نؤمن بأهمية الفعاليات في تعزيز التواصل الاجتماعي ودعم الثقافة المحلية، ونسعى لتقديم أفضل الخدمات لضمان تجربة لا تُنسى لكل المشاركين.</p>
-                </div>
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1515169067868-5387ec356754" alt="فريق منصة الفعاليات" loading="lazy" />
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-content container">
-            <div class="footer-logo">
-                <h2 data-lang-ar="منصة الفعاليات" data-lang-en="Events Platform">منصة الفعاليات</h2>
-            </div>
-            <div class="footer-links">
-                <a href="about.html" data-lang-ar="حول" data-lang-en="About">حول</a>
-                <a href="contact.html" data-lang-ar="تواصل" data-lang-en="Contact">تواصل</a>
-                <a href="terms.html" data-lang-ar="الشروط والأحكام" data-lang-en="Terms and Conditions">الشروط والأحكام</a>
-            </div>
-            <div class="footer-social">
-                <a href="https://facebook.com" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://twitter.com" aria-label="تويتر"><i class="fab fa-twitter"></i></a>
-                <a href="https://instagram.com" aria-label="إنستغرام"><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
-        <p data-lang-ar="© 2025 منصة الفعاليات - جميع الحقوق محفوظة" data-lang-en="© 2025 Events Platform - All Rights Reserved">
-            © <script>document.write(new Date().getFullYear())</script> منصة الفعاليات - جميع الحقوق محفوظة
-        </p>
-    </footer>
-
-    <script src="slider.js"></script>
+<body data-page="about" class="inner">
+  <header id="site-header"></header>
+  <main>
+    <div class="page-head"><div class="container"><h1 data-i18n="about.t"></h1><p data-i18n="about.p"></p></div></div>
+    <section>
+      <div class="container about-grid">
+        <div class="reveal"><div class="sec-head"><div><span class="k" data-i18n="about.h"></span><h2 data-i18n="about.t"></h2></div></div><p data-i18n="about.p1"></p><p data-i18n="about.p2"></p></div>
+        <div class="about-img reveal"><img src="images/sea-nights.jpeg" alt="" /></div>
+      </div>
+    </section>
+    <section style="padding-top:0">
+      <div class="container vm">
+        <div class="step reveal"><div class="ic">🔭</div><h3 data-i18n="vision.t"></h3><p data-i18n="vision.p"></p></div>
+        <div class="step reveal"><div class="ic">🎯</div><h3 data-i18n="mission.t"></h3><p data-i18n="mission.p"></p></div>
+        <div class="step reveal"><div class="ic">🤝</div><h3 data-i18n="val.t"></h3><p data-i18n="val.p"></p></div>
+      </div>
+    </section>
+  </main>
+  <footer id="site-footer"></footer>
 </body>
 </html>

@@ -1,90 +1,36 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="تسجيل الدخول إلى منصة الفعاليات" />
-    <meta name="keywords" content="تسجيل دخول, منصة الفعاليات" />
-    <title data-lang-ar="تسجيل الدخول - منصة الفعاليات" data-lang-en="Login - Events Platform">تسجيل الدخول - منصة الفعاليات</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-    <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>منصة الفعاليات</title>
+  <meta name="description" content="سجّل دخولك لحجز تذاكرك" />
+  <meta name="theme-color" content="#0f3d3e" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="assets/data.js" defer></script>
+  <script src="assets/app.js" defer></script>
 </head>
-<body>
-    <header>
-        <div class="logo">
-            <h1 data-lang-ar="منصة الفعاليات" data-lang-en="Events Platform">منصة الفعاليات</h1>
-        </div>
-        <nav aria-label="التنقل الرئيسي">
-            <ul>
-                <li><a href="index.html" data-lang-ar="الرئيسية" data-lang-en="Home">الرئيسية</a></li>
-                <li><a href="events.html" data-lang-ar="الفعاليات" data-lang-en="Events">الفعاليات</a></li>
-                <li><a href="about.html" data-lang-ar="حول" data-lang-en="About">حول</a></li>
-                <li><a href="contact.html" data-lang-ar="تواصل" data-lang-en="Contact">تواصل</a></li>
-                <li><a href="signup.html" data-lang-ar="إنشاء حساب" data-lang-en="Sign Up">إنشاء حساب</a></li>
-                <li><a href="login.html" class="active" data-lang-ar="تسجيل الدخول" data-lang-en="Login">تسجيل الدخول</a></li>
-            </ul>
-            <div class="header-search">
-                <input type="text" id="header-search" placeholder="ابحث..." aria-label="البحث في الموقع" data-lang-ar-placeholder="ابحث..." data-lang-en-placeholder="Search..." />
-                <button class="btn-search" aria-label="بحث"><i class="fas fa-search"></i></button>
-            </div>
-            <div class="language-switcher">
-                <select id="language-switcher" aria-label="اختيار اللغة">
-                    <option value="ar">عربي</option>
-                    <option value="en">English</option>
-                </select>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <section id="auth-section" class="container">
-            <div class="auth-container">
-                <!-- نموذج تسجيل الدخول -->
-                <div class="auth-form">
-                    <h2 data-lang-ar="تسجيل الدخول" data-lang-en="Login">تسجيل الدخول</h2>
-                    <form id="login-form" aria-label="نموذج تسجيل الدخول">
-                        <div class="form-group">
-                            <label for="login-email" data-lang-ar="البريد الإلكتروني" data-lang-en="Email">البريد الإلكتروني</label>
-                            <input type="email" id="login-email" placeholder="أدخل بريدك الإلكتروني" required aria-required="true" data-lang-ar-placeholder="أدخل بريدك الإلكتروني" data-lang-en-placeholder="Enter your email" />
-                        </div>
-                        <div class="form-group">
-                            <label for="login-password" data-lang-ar="كلمة المرور" data-lang-en="Password">كلمة المرور</label>
-                            <input type="password" id="login-password" placeholder="أدخل كلمة المرور" required aria-required="true" data-lang-ar-placeholder="أدخل كلمة المرور" data-lang-en-placeholder="Enter your password" />
-                        </div>
-                        <button type="submit" class="btn" data-lang-ar="تسجيل الدخول" data-lang-en="Login">تسجيل الدخول</button>
-                        <p class="form-message" aria-live="polite"></p>
-                    </form>
-                    <p class="auth-link">
-                        <span data-lang-ar="ليس لديك حساب؟" data-lang-en="Don't have an account?"></span>
-                        <a href="signup.html" data-lang-ar="إنشاء حساب" data-lang-en="Sign Up">إنشاء حساب</a>
-                    </p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-content container">
-            <div class="footer-logo">
-                <h2 data-lang-ar="منصة الفعاليات" data-lang-en="Events Platform">منصة الفعاليات</h2>
-            </div>
-            <div class="footer-links">
-                <a href="about.html" data-lang-ar="حول" data-lang-en="About">حول</a>
-                <a href="contact.html" data-lang-ar="تواصل" data-lang-en="Contact">تواصل</a>
-                <a href="terms.html" data-lang-ar="الشروط والأحكام" data-lang-en="Terms and Conditions">الشروط والأحكام</a>
-            </div>
-            <div class="footer-social">
-                <a href="https://facebook.com" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://twitter.com" aria-label="تويتر"><i class="fab fa-twitter"></i></a>
-                <a href="https://instagram.com" aria-label="إنستغرام"><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
-        <p data-lang-ar="© 2025 منصة الفعاليات - جميع الحقوق محفوظة" data-lang-en="© 2025 Events Platform - All Rights Reserved">
-            © <script>document.write(new Date().getFullYear())</script> منصة الفعاليات - جميع الحقوق محفوظة
-        </p>
-    </footer>
-
-    <script src="slider.js"></script>
+<body data-page="login" class="inner">
+  <header id="site-header"></header>
+  <main class="auth">
+    <aside class="auth-side"><h2 data-i18n="side.t"></h2><p data-i18n="side.p"></p></aside>
+    <div class="auth-main">
+      <div class="auth-card">
+        <h1 data-i18n="login.t"></h1><p class="sub" data-i18n="login.p"></p>
+        <form id="auth-form" novalidate>
+          <div class="fg"><label for="a-email" data-i18n="c.email"></label><input id="a-email" name="email" type="email" class="ltr" placeholder="name@example.com" autocomplete="email" /><div class="err"></div></div>
+          <div class="fg"><label for="a-pw" data-i18n="pw"></label><div class="pw"><input id="a-pw" name="password" type="password" data-i18n-ph="pw.ph" autocomplete="current-password" /><button type="button" data-i18n="show"></button></div><div class="err"></div></div>
+          <button class="btn full" type="submit" data-i18n="login.btn"></button>
+        </form>
+        <p class="alt"><span data-i18n="login.no"></span> <a href="signup.html?next=" id="alt-link" data-i18n="signup"></a></p>
+        <p class="note" data-i18n="demo.note"></p>
+      </div>
+    </div>
+  </main>
+  <script>(function(){var n=new URLSearchParams(location.search).get("next");if(n){document.addEventListener("DOMContentLoaded",function(){var a=document.getElementById("alt-link");a.href=a.getAttribute("href").split("?")[0]+"?next="+encodeURIComponent(n);});}})();</script>
+  <footer id="site-footer"></footer>
 </body>
 </html>
