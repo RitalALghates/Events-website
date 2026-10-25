@@ -1,141 +1,38 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="استكشف أحدث الفعاليات الثقافية والترفيهية في السعودية" />
-    <meta name="keywords" content="فعاليات السعودية, مهرجانات, حفلات, مؤتمرات" />
-    <title data-lang-ar="الفعاليات - منصة الفعاليات" data-lang-en="Events - Events Platform">الفعاليات - منصة الفعاليات</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-    <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>منصة الفعاليات</title>
+  <meta name="description" content="تصفّح الفعاليات وصفِّها حسب المدينة والنوع ثم احجز مقعدك" />
+  <meta name="theme-color" content="#0f3d3e" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="assets/data.js" defer></script>
+  <script src="assets/app.js" defer></script>
 </head>
-<body>
-    <header>
-        <div class="logo">
-            <h1 data-lang-ar="منصة الفعاليات" data-lang-en="Events Platform">منصة الفعاليات</h1>
+<body data-page="events" class="inner">
+  <header id="site-header"></header>
+  <main>
+    <div class="page-head"><div class="container"><h1 data-i18n="events.t"></h1><p data-i18n="events.p"></p></div></div>
+    <section style="padding-top:0">
+      <div class="container">
+        <div class="toolbar">
+          <div class="tb-row">
+            <div class="grow"><input id="f-q" type="search" data-i18n-ph="tb.search" aria-label="Search" autocomplete="off" /></div>
+            <select id="f-sort" aria-label="Sort"></select>
+          </div>
+          <div class="chips" id="chips-cat"></div>
+          <div class="chips" id="chips-city"></div>
         </div>
-        <nav aria-label="التنقل الرئيسي">
-            <ul>
-                <li><a href="index.html" data-lang-ar="الرئيسية" data-lang-en="Home">الرئيسية</a></li>
-                <li><a href="events.html" class="active" data-lang-ar="الفعاليات" data-lang-en="Events">الفعاليات</a></li>
-                <li><a href="about.html" data-lang-ar="حول" data-lang-en="About">حول</a></li>
-                <li><a href="contact.html" data-lang-ar="تواصل" data-lang-en="Contact">تواصل</a></li>
-                <li><a href="signup.html" data-lang-ar="إنشاء حساب" data-lang-en="Sign Up">إنشاء حساب</a></li>
-                <li><a href="login.html" data-lang-ar="تسجيل دخول" data-lang-en="Login">تسجيل دخول</a></li>
-            </ul>
-            <div class="header-search">
-                <input type="text" id="header-search" placeholder="ابحث..." aria-label="البحث في الموقع" data-lang-ar-placeholder="ابحث..." data-lang-en-placeholder="Search..." />
-                <button class="btn-search" aria-label="بحث"><i class="fas fa-search"></i></button>
-            </div>
-            <!-- <div class="language-switcher">
-                <select id="language-switcher" aria-label="اختيار اللغة">
-                    <option value="ar">عربي</option>
-                    <option value="en">English</option>
-                </select>
-            </div> -->
-        </nav>
-    </header>
-
-    <main>
-        <section id="events-slider" class="slider-container" aria-label="سلايدر الفعاليات">
-            <button class="pause-slider" aria-label="إيقاف السلايدر">⏸</button>
-            <div class="slider">
-                <div class="slide active">
-                    <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d" alt="مهرجان الفنون في الرياض" loading="lazy" />
-                    <div class="slide-caption">
-                        <h2 data-lang-ar="مهرجان الفنون" data-lang-en="Arts Festival">مهرجان الفنون</h2>
-                        <p data-lang-ar="استمتع بعروض فنية مبهرة!" data-lang-en="Enjoy stunning art performances!">استمتع بعروض فنية مبهرة!</p>
-                        <button class="btn" data-lang-ar="احجز الآن" data-lang-en="Book Now">احجز الآن</button>
-                    </div>
-                </div>
-                <div class="slide">
-                    <img src="https://images.unsplash.com/photo-1471295253337-3ceaaedca402" alt="سباق المغامرة في جدة" loading="lazy" />
-                    <div class="slide-caption">
-                        <h2 data-lang-ar="سباق المغامرة" data-lang-en="Adventure Race">سباق المغامرة</h2>
-                        <p data-lang-ar="تحدى نفسك في تجربة رياضية فريدة!" data-lang-en="Challenge yourself in a unique sports experience!">تحدى نفسك في تجربة رياضية فريدة!</p>
-                        <button class="btn" data-lang-ar="احجز الآن" data-lang-en="Book Now">احجز الآن</button>
-                    </div>
-                </div>
-            </div>
-            <button class="slider-control prev" aria-label="الشريحة السابقة"><i class="fas fa-chevron-right"></i></button>
-            <button class="slider-control next" aria-label="الشريحة التالية"><i class="fas fa-chevron-left"></i></button>
-            <div class="slider-dots" role="tablist"></div>
-        </section>
-
-        <section id="events-list" class="container">
-            <h2 data-lang-ar="جميع الفعاليات" data-lang-en="All Events">جميع الفعاليات</h2>
-            <div class="events-grid">
-                <div class="event-card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQErLnF8l8UVZp8gjzjr59hm6UTXFRLNKThWg&s" alt="مهرجان التراث الثقافي في الرياض" loading="lazy" />
-                    <div class="event-info">
-                        <h3 data-lang-ar="مهرجان التراث الثقافي" data-lang-en="Cultural Heritage Festival">مهرجان التراث الثقافي</h3>
-                        <p data-lang-ar="تاريخ: 15 يوليو 2025" data-lang-en="Date: July 15, 2025">تاريخ: 15 يوليو 2025</p>
-                        <p data-lang-ar="المكان: الرياض" data-lang-en="Location: Riyadh">المكان: الرياض</p>
-                        <button class="btn" data-lang-ar="احجز الآن" data-lang-en="Book Now">احجز الآن</button>
-                    </div>
-                </div>
-                <div class="event-card">
-                    <img src="https://www.albayannews.net/wp-content/uploads/2021/09/B59F2D82-BAE2-455F-8265-0BEEE1CFE80A.jpeg" alt="مهرجان الشرقية الترفيهي في الدمام" loading="lazy" />
-                    <div class="event-info">
-                        <h3 data-lang-ar="مهرجان الشرقية الترفيهي" data-lang-en="Eastern Entertainment Festival">مهرجان الشرقية الترفيهي</h3>
-                        <p data-lang-ar="تاريخ: 10 ابريل 2025" data-lang-en="Date: April 10, 2025">تاريخ: 10 ابريل 2025</p>
-                        <p data-lang-ar="المكان: الدمام" data-lang-en="Location: Dammam">المكان: الدمام</p>
-                        <button class="btn" data-lang-ar="احجز الآن" data-lang-en="Book Now">احجز الآن</button>
-                    </div>
-                </div>
-                <div class="event-card">
-                    <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819" alt="ليلة الموسيقى الحية في جدة" loading="lazy" />
-                    <div class="event-info">
-                        <h3 data-lang-ar="ليلة الموسيقى الحية" data-lang-en="Live Music Night">ليلة الموسيقى الحية</h3>
-                        <p data-lang-ar="تاريخ: 20 يوليو 2025" data-lang-en="Date: July 20, 2025">تاريخ: 20 يوليو 2025</p>
-                        <p data-lang-ar="المكان: جدة" data-lang-en="Location: Jeddah">المكان: جدة</p>
-                        <button class="btn" data-lang-ar="احجز الآن" data-lang-en="Book Now">احجز الآن</button>
-                    </div>
-                </div>
-                <div class="event-card">
-                    <img src="images/مهرجان أطعمة العالم.jpeg" alt="مهرجان أطعمة العالم في جدة" loading="lazy" />
-                    <div class="event-info">
-                        <h3 data-lang-ar="مهرجان أطعمة العالم" data-lang-en="World Food Festival">مهرجان أطعمة العالم</h3>
-                        <p data-lang-ar="تاريخ: 10 يوليو 2025" data-lang-en="Date: July 10, 2025">تاريخ: 10 يوليو 2025</p>
-                        <p data-lang-ar="المكان: جدة" data-lang-en="Location: Jeddah">المكان: جدة</p>
-                        <button class="btn" data-lang-ar="احجز الآن" data-lang-en="Book Now">احجز الآن</button>
-                    </div>
-                </div>
-                <div class="event-card">
-                    <img src="images/ليب.png" alt="مؤتمر التقنية في الرياض" loading="lazy" />
-                    <div class="event-info">
-                        <h3 data-lang-ar="مؤتمر التقنية" data-lang-en="Technology Conference">مؤتمر التقنية</h3>
-                        <p data-lang-ar="تاريخ: 5 يوليو 2025" data-lang-en="Date: July 5, 2025">تاريخ: 5 يوليو 2025</p>
-                        <p data-lang-ar="المكان: الرياض" data-lang-en="Location: Riyadh">المكان: الرياض</p>
-                        <button class="btn" data-lang-ar="احجز الآن" data-lang-en="Book Now">احجز الآن</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-content container">
-            <div class="footer-logo">
-                <h2 data-lang-ar="منصة الفعاليات" data-lang-en="Events Platform">منصة الفعاليات</h2>
-            </div>
-            <div class="footer-links">
-                <a href="about.html" data-lang-ar="حول" data-lang-en="About">حول</a>
-                <a href="contact.html" data-lang-ar="تواصل" data-lang-en="Contact">تواصل</a>
-                <a href="terms.html" data-lang-ar="الشروط والأحكام" data-lang-en="Terms and Conditions">الشروط والأحكام</a>
-            </div>
-            <div class="footer-social">
-                <a href="https://facebook.com" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://twitter.com" aria-label="تويتر"><i class="fab fa-twitter"></i></a>
-                <a href="https://instagram.com" aria-label="إنستغرام"><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
-        <p data-lang-ar="© 2025 منصة الفعاليات - جميع الحقوق محفوظة" data-lang-en="© 2025 Events Platform - All Rights Reserved">
-            © <script>document.write(new Date().getFullYear())</script> منصة الفعاليات - جميع الحقوق محفوظة
-        </p>
-    </footer>
-
-    <script src="slider.js"></script>
+        <div class="count-bar"><b id="count"></b></div>
+        <div class="grid" id="grid"></div>
+        <div class="empty" id="empty"><b data-i18n="empty.t"></b><span data-i18n="empty.p"></span><br><button class="btn sm ghost" id="reset" style="margin-top:14px" data-i18n="reset"></button></div>
+      </div>
+    </section>
+  </main>
+  <footer id="site-footer"></footer>
 </body>
 </html>
